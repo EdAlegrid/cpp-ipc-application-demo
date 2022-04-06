@@ -3,7 +3,7 @@
 const net = require('net');
 const { Device } = require('m2m');
 
-const device = new Device(600);
+const device = new Device(300);
 
 device.connect(() => {
 

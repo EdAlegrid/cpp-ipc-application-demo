@@ -38,8 +38,8 @@ int main()
       // parse received json data 
       try{
         auto j = json::parse(data);
-       
-        if(j["type"] == "random"){
+
+        if(j["source"] == "cpp-server"){
           j["value"] = rn;
           cout << "send back json data: " << server->socketWrite(j.dump()) << endl; 
         }

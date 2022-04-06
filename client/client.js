@@ -4,7 +4,7 @@ let client = new Client();
 
 client.connect(() => {
 
-  client.watch({id:600, channel:'ipc-channel'}, (data) => {  //300
+  client.watch({id:300, channel:'ipc-channel'}, (data) => {  
     try{
       let jd = JSON.parse(data);
       console.log('rcvd json data:', jd);

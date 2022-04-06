@@ -5,7 +5,7 @@
 
 In this quick tour, the client will attempt to send and capture data from a C/C++ application through inter-process communication (ipc) using *tcp* with the remote device.
 
-The client will send a *json* payload data { type:"random", source:"cpp-server" }  to a remote device and should receive a random value from the remote device e.g. { type:"random", value: 26 };
+The client will send a *json* payload data { type:"random", source:"cpp-server" }  to a remote device and should receive a random value from the remote device e.g. { type:"random", source:"cpp-server", value: 26 };
 
 We will use the nlohmann-json (https://github.com/nlohmann/json) library for *json* data interchange with C/C++ application.
 

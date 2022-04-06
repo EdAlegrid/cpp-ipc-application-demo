@@ -94,7 +94,7 @@ $ node device.js
 ```js
 $ git clone https://github.com/EdAlegrid/cpp-ipc-application-demo.git
 ```
-Check the *main.cpp* source file inside the *cpp-ipc-application-demo* directory as shown below.
+Check the *main.cpp* source file inside the *cpp-ipc-application-demo/app* sub-directory as shown below.
 ```js
 /*
  * File:   main.ccp

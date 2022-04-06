@@ -5,7 +5,7 @@
 
 In this quick tour, the client will attempt to send and capture data from a C/C++ application through inter-process communication (ipc) using *tcp* with the remote device.
 
-The client will send a *json* payload data { type:"random", value:"" } to a remote device and should receive a random value from the remote device e.g. { type:"random", value: 26 };
+The client will send a *json* payload data { type:"random", source:"cpp-server" }  to a remote device and should receive a random value from the remote device e.g. { type:"random", value: 26 };
 
 We will use the nlohmann-json (https://github.com/nlohmann/json) library for *json* data interchange with C/C++ application.
 
@@ -28,7 +28,7 @@ device.connect(() => {
 
   device.setData('ipc-channel', (data) => {
 
-    let pl = JSON.stringify({type:'random', source:'C++ server'});
+    let pl = JSON.stringify({type:'random', source:'cpp-server'});
 
     TcpClient('127.0.0.1', 5300, pl, (err, d) => {
       if(err) return console.error('TcpClient error:', err.message);
@@ -137,7 +137,7 @@ int main()
       try{
         auto j = json::parse(data);
 
-        if(j["type"] == "random"){
+        if(j["source"] == "cpp-server"){
           j["value"] = rn;
           cout << "send back json data: " << server->socketWrite(j.dump()) << endl;
         }
@@ -211,4 +211,4 @@ $ node client.js
 ```
 The client should receive a *json* data with a random value similar below.
 
-*rcvd json data: { type: 'random', source: 'C++-server', value: 16 }*
+*rcvd json data: { type: 'random', source: 'cpp-server', value: 16 }*

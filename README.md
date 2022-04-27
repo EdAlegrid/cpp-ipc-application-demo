@@ -1,7 +1,7 @@
 
 ## Watch Data from Remote C/C++ Application through IPC
-![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour3.svg?sanitize=true)
-[](quicktour.svg)
+[](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour3.svg?sanitize=true)
+![](assets/cplusAppQuicktour.svg)
 
 In this quick tour, the client will attempt to send and capture data from a C/C++ application through inter-process communication (ipc) using *tcp* with the remote device.
 

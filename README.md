@@ -1,5 +1,5 @@
 
-## Watch Data from Remote C/C++ Application through IPC
+## Monitor Data from Remote C/C++ Application through IPC
 [](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour3.svg?sanitize=true)
 ![](assets/cplusAppQuicktour.svg)
 

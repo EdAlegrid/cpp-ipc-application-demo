@@ -159,7 +159,10 @@ int main()
 ```
 ##### 2. Install nlohmann-json library for *json* data interchange.  
 ```js
-$ sudo apt-get install nlohmann-json3-dev
+$ sudo apt update
+```
+```js
+$ sudo apt install nlohmann-json3-dev
 ```
 ##### 3. Compile the *main.cpp* source file inside of the *cpp-ipc-application-demo/app* sub-directory.
 ```js
